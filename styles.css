@@ -158,7 +158,7 @@ main {
 
 @media (max-width: 480px) {
   .profile-card {
-    padding: 15px;
+    padding: 30px;
   }
 
   .text-section h1 {
