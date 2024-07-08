@@ -187,8 +187,17 @@ main {
     font-size: 1em;
   }
 
+  .contact-me {
+    margin-top: 60px;
+  }
+
+  .contact-me h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+
   .contact-info a {
-    padding: 15px;
-    font-size: 1em;
+    padding: 20px;
+    font-size: 1.2em;
   }
 }
