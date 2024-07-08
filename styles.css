@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -10,6 +11,7 @@ body {
   align-items: center;
 }
 
+/* Profile Card Styles */
 header {
   width: 100%;
   display: flex;
@@ -30,6 +32,7 @@ header {
   width: 100%;
 }
 
+/* Profile Picture Styles */
 .profile-header {
   display: flex;
   flex-direction: column;
@@ -44,10 +47,7 @@ header {
   box-shadow: 0 0 15px 5px rgba(0, 123, 255, 0.7), 0 0 30px 10px rgba(0, 123, 255, 0.5);
 }
 
-.profile-info h1 {
-  margin: 0;
-}
-
+/* Main Content Styles */
 main {
   padding: 20px;
   max-width: 1000px;
@@ -57,6 +57,7 @@ main {
   align-items: center;
 }
 
+/* About Me Section */
 .about-me {
   display: flex;
   flex-direction: column;
@@ -79,6 +80,7 @@ main {
   font-size: 1.1em;
 }
 
+/* Image and Quote Section */
 .image-quote-section {
   display: flex;
   flex-direction: column;
@@ -99,6 +101,7 @@ main {
   border-radius: 10px;
 }
 
+/* Contact Me Section */
 .contact-me {
   margin-top: 40px;
   text-align: center;
@@ -128,7 +131,7 @@ main {
   transition: background-color 0.3s, transform 0.3s;
   width: 100%;
   max-width: 300px;
-  justify-content: flex-start; /* Menempatkan ikon di sebelah kiri */
+  justify-content: flex-start;
 }
 
 .contact-info a:hover {
@@ -141,7 +144,7 @@ main {
   height: 24px;
 }
 
-/* Media queries for responsiveness */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .text-section h1 {
     font-size: 2em;
