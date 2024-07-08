@@ -161,12 +161,26 @@ main {
     padding: 30px;
   }
 
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+  }
+
+  .profile-info h1 {
+    font-size: 2em;
+  }
+
+  .profile-info p {
+    font-size: 1.2em;
+  }
+
   .text-section h1 {
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
 
   .text-section p {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
   .quote {
@@ -174,7 +188,7 @@ main {
   }
 
   .contact-info a {
-    padding: 8px;
-    font-size: 0.9em;
+    padding: 15px;
+    font-size: 1em;
   }
 }
