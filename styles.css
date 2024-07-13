@@ -166,21 +166,21 @@ main {
 
 @media (max-width: 480px) {
   .profile-card {
-    padding: 30px;
+    padding: 50px;
   }
 
   .profile-picture {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 30px;
   }
 
   .profile-info h1 {
-    font-size: 2em;
+    font-size: 5em;
   }
 
   .profile-info p {
-    font-size: 1.2em;
+    font-size: 2em;
   }
 
   .text-section h1 {
