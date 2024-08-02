@@ -93,6 +93,14 @@
         #input-container button:hover {
             background: #0056b3;
         }
+        .hide-on-mobile {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .hide-on-mobile {
+                display: inline-block;
+            }
+        }
         .dropup {
             position: relative;
             display: inline-block;
@@ -102,7 +110,7 @@
             position: absolute;
             background-color: transparent;
             min-width: 160px;
-            bottom: 40px; 
+            bottom: 40px;
             right: 0;
             z-index: 1;
         }
@@ -115,13 +123,13 @@
             background: none;
             width: 100%;
             text-align: left;
-            margin-bottom: 5px; 
-            background-color: transparent; 
-            cursor: pointer; 
+            margin-bottom: 5px;
+            background-color: transparent;
+            cursor: pointer;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
         .dropup-content button:last-child {
-            margin-bottom: 0; 
+            margin-bottom: 0;
         }
         .dropup-content button:hover {
             background-color: #f1f1f1;
@@ -137,7 +145,7 @@
         <div id="input-container">
             <input type="text" id="userInput" placeholder="Type a message...">
             <div class="buttons">
-            	<button onclick="sendMessage()" class="hide" >Send</button>
+                <button onclick="sendMessage()" class="hide-on-mobile">Send</button>
                 <div class="dropup">
                     <button onclick="toggleDropup()">Action</button>
                     <div id="dropup-content" class="dropup-content">
@@ -154,7 +162,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
     <script>
         function appendMessage(sender, text) {
             const messageContainer = document.createElement('div');
