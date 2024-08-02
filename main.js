@@ -35,7 +35,7 @@ function cekStatus(item) {
     const machaItems = ['siapa yang membuatmu', 'siapa creator mu']
     
     //Bot Version
-    const versionItems = ['!version']
+    const versionItems = ['!version', '!versi']
     
     
     //Bot Responses
@@ -166,7 +166,6 @@ function cekStatus(item) {
         'Airy  (~Bot): "Kamu mau tidur ya.. Selamat malem, mimpi indah ya.."',
         'Airy  (~Bot): "Selamat malem.. Mimpi indah ya sayang..."',
         'Airy  (~Bot): "Aku mau tidur juga nih.. Selamat malem"',
-        'Airy  (~Bot): "Malem juga.. jangan lupa cuci kaki sebelum tidur"'
     ]
     
     const activeA = [
