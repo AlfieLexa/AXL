@@ -20,7 +20,7 @@ function cekStatus(item) {
     const action1Items = ['gak lagi ngapa ngapain', 'lagi diem', 'lagi istirahat', 'lagi santai'];
     
     
-    //Command Bots
+    //Command Bot
     const kissItems = ['!cium', '!kiss'];
     const damagechatItems = ['!gombal'];
     const hurtItems = ['!jatuh'];
