@@ -81,45 +81,45 @@ function cekStatus(item) {
         'Airy  (~Bot): "Aku lagi mikirin kamu."',
         'Airy  (~Bot): "Aku sedang memikirkanmu."',
         'Airy  (~Bot): "Aku lagi nungguin kamu nih."',
-        'Airy  (~Bot): "Kamu?"',
-        'Airy  (~Bot): "Kamu gimana?"'
+        'Airy  (~Bot): "Aku lagi ngebayangin kalo kamu ada di samping aku sekarang"',
+        'Airy  (~Bot): "Aku lagi liatin kamu dari jauh pake SPR-3 Kal 7.62mm nih"'
     ];
 
     const rspecialnoResponses = [
-        'Airy  (~Bot): "Gak mau ah."',
-        'Airy  (~Bot): "Negative."',
-        'Airy  (~Bot): "Malas ah."',
-        'Airy  (~Bot): "Gak boleh."',
-        'Airy  (~Bot): "Nggak."'
+        'Airy  (~Bot): "Yah... Padahal aku mau makan bareng kamu, lain kali makan bareng ya.."',
+        'Airy  (~Bot): "Tapi aku mau makan bareng kamu, gimana kalo nanti kita makan bareng"',
+        'Airy  (~Bot): "Kenapa nggak?? Aku kan mau makan bareng kamu, yaudah deh.. Tapi nanti kita makan bareng ya.."',
+        'Airy  (~Bot): "Yaudah gapapa, tapi nanti kita makan bareng ya.."',
+        'Airy  (~Bot): "Tapi lain kali kita makan bareng ya.."'
     ];
 
     const rspecialyesResponses = [
-        'Airy  (~Bot): "Boleh."',
-        'Airy  (~Bot): "Ayo!"',
-        'Airy  (~Bot): "Boleh kok."',
-        'Airy  (~Bot): "Yap!"',
-        'Airy  (~Bot): "Yeah!"',
-        'Airy  (~Bot): "Hell yeah!"'
+        'Airy  (~Bot): "Hmmm.. Kayaknya makan waffle enak"',
+        'Airy  (~Bot): "Waffle enak nihh"',
+        'Airy  (~Bot): "Kayaknya kalo makan waffle enak deh"',
+        'Airy  (~Bot): "Kita makan waffle mau gak"',
+        'Airy  (~Bot): "Aku lagi mau waffle nih"',
+        'Airy  (~Bot): "Kayaknya waffle enak"'
     ];
 
     const ragreechatResponses = [
-        'Airy  (~Bot): "Boleh tuh."',
-        'Airy  (~Bot): "Ayo aja."',
-        'Airy  (~Bot): "Sip!"',
-        'Airy  (~Bot): "Okey!"',
-        'Airy  (~Bot): "Keliatannya enak!"'
+        'Airy  (~Bot): "Malem minggu aku dirumah nih.. mau gak?"',
+        'Airy  (~Bot): "Nanti hari sabtu kita jalannya ya.."',
+        'Airy  (~Bot): "Aku kayaknya bisa di hari sabtu.. Mau gak?"',
+        'Airy  (~Bot): "Waktu bebas aku cuman hari sabtu nih.. Mau sabtu gak?"',
+        'Airy  (~Bot): "Aku bisa pergi di hari sabtu.. Gimana?"'
     ];
 
     const rnochatResponses = [
-        'Airy  (~Bot): "Maaf ya aku gak bisa."',
-        'Airy  (~Bot): "Gak."'
+        'Airy  (~Bot): "Yaudah deh kalo gak bisa.. Tapi nanti kita jalan ya.."',
+        'Airy  (~Bot): "Yaudah deh.. Tapi nanti kita jalan bareng ya.."'
     ];
 
     const rpowerchatResponses = [
-        'Airy  (~Bot): "Kasih aku semangat dong."',
-        'Airy  (~Bot): "Aku butuh semangat dari kamu nih."',
-        'Airy  (~Bot): "Aku lagi gak semangat nih."',
-        'Airy  (~Bot): "Aku gak semangat."'
+        'Airy  (~Bot): "Kamu itu harus semangat.. Biar orang tua kamu bangga"',
+        'Airy  (~Bot): "Kamu itu harus semangat, kalo ada yang susah kita bisa selesaiin bareng bareng"',
+        'Airy  (~Bot): "Laki laki itu harus kuat dan pantang menyerah.. Jadi semangat ya.."',
+        'Airy  (~Bot): "Kalo kamu gak semangat nanti kamu kesulitan di tantangan berikutnya"'
     ];
     
 
@@ -195,7 +195,7 @@ function cekStatus(item) {
     ]
     
     const version = [
-    	'Airy  (~Bot): "Versiku saat ini adalah 1.2 model A"'
+    	'Airy  (~Bot): "Versiku saat ini adalah 1.2 model A02"'
     ]
     
     item = item.toLowerCase();
