@@ -1,52 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alfie Lexandra</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RomanticBotChat AI</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #chat-container {
+            width: 90%;
+            max-width: 600px;
+            height: 90%;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        #messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #e5ddd5;
+        }
+        .message {
+            margin: 10px 0;
+            display: flex;
+        }
+        .message.user {
+            justify-content: flex-end;
+        }
+        .message.bot {
+            justify-content: flex-start;
+        }
+        .bubble {
+            max-width: 70%;
+            padding: 10px 15px;
+            border-radius: 20px;
+            position: relative;
+            margin: 5px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .bubble.user {
+            background-color: #dcf8c6;
+            border-bottom-right-radius: 0;
+        }
+        .bubble.bot {
+            background-color: #fff;
+            border-bottom-left-radius: 0;
+        }
+        #input-container {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+        #input-container input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+        }
+        #input-container .buttons {
+            display: flex;
+        }
+        #input-container button {
+            padding: 10px 20px;
+            border: none;
+            background: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 20px;
+            margin-left: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
+            font-size: 14px;
+        }
+        #input-container button:hover {
+            background: #0056b3;
+        }
+        .dropup {
+            position: relative;
+            display: inline-block;
+        }
+        .dropup-content {
+            display: none;
+            position: absolute;
+            background-color: transparent;
+            min-width: 160px;
+            bottom: 40px; 
+            right: 0;
+            z-index: 1;
+        }
+        .dropup-content button {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 5px; 
+            background-color: transparent; 
+            cursor: pointer; 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .dropup-content button:last-child {
+            margin-bottom: 0; 
+        }
+        .dropup-content button:hover {
+            background-color: #f1f1f1;
+        }
+        .show {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-  <header class="profile-card">
-    <div class="profile-header">
-      <img src="picture/alfie.jpg" alt="Profile Picture" class="profile-picture">
-      <div class="profile-info">
-        <h1>Alfie Luxiona Lexandra</h1>
-        <p>My job: vocalist in BlaztBand</p>
-        <p>Likes: listening to metal music, engaging in risky activities</p>
-      </div>
+    <div id="chat-container">
+        <div id="messages"></div>
+        <div id="input-container">
+            <input type="text" id="userInput" placeholder="Type a message...">
+            <div class="buttons">
+            	<button onclick="sendMessage()" class="hide" >Send</button>
+                <div class="dropup">
+                    <button onclick="toggleDropup()">Action</button>
+                    <div id="dropup-content" class="dropup-content">
+                        <button onclick="insertAndSendAction('!kiss')">Cium</button>
+                        <button onclick="insertAndSendAction('!gombal')">Gombal</button>
+                        <button onclick="insertAndSendAction('!jatuh')">Jatuh</button>
+                        <button onclick="insertAndSendAction('!hug')">Peluk</button>
+                        <button onclick="insertAndSendAction('!pagi')">Pagi</button>
+                        <button onclick="insertAndSendAction('!malam')">Malem</button>
+                        <!-- Tambahkan tombol lainnya di sini -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <main>
-    <section class="about-me">
-      <div class="text-content" style="text-align:center;">
-        <h1>I am Alfie Luxiona Lexandra</h1>
-        <p><strong>Alfie Luxiona Lexandra</strong> is a vocalist from a <strong>metal band</strong> called <strong>BlaztBand</strong> in Indonesia who has hated singing and programming things since childhood. He has a deep love for <strong>Extreme Songs</strong> and <strong>Dangerous Things</strong>. Alfie has developed various things about the <strong>world of music</strong>, from <strong>how to play musical instruments</strong> to <strong>how to do brutal and fierce vocals</strong>. Everything he creates is the result of <strong>creativity</strong> and <strong>determination</strong> to make <strong>money</strong> and <strong>donate</strong> it to <strong>people in need</strong>.</p>
-        <blockquote>Being a musician and vocalist is also very enjoyable for me, because music gives me the power to turn imagination into reality. Every music project is a new opportunity to learn and grow. I believe that my experience can benefit others too!</blockquote><br>
-      </div>
-      <div class="image-content">
-        <img src="picture/project.jpg" alt="Alfie Luxiona Lexandra with his project" class="project-image">
-      </div>
-    </section>
+    <script src="main.js"></script>
+    <script>
+        function appendMessage(sender, text) {
+            const messageContainer = document.createElement('div');
+            messageContainer.classList.add('message', sender);
 
-    <section class="contact-me">
-      <h2>Contact Me!</h2>
-      <div class="contact-info">
-        <a href="https://Instagram.com/alfieluxionalexandra" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> AlfieLexandra
-        </a>
-        <a href="https://twitter.com/Aluxndra" target="_blank">
-          <img src="https://seeklogo.com/images/T/twitter-x-logo-101C7D2420-seeklogo.com.png?v=638258862800000000" alt="Twitter"> @Aluxndra
-        </a>
-        <a href="https://wa.me/628950547272">
-          <img src="https://www.svgrepo.com/show/303147/whatsapp-icon-logo.svg" alt="Phone"> Whatsapp
-        </a>
-        <a href="mailto:alfielexa@proton.me">
-          <img src="https://www.svgrepo.com/show/452213/gmail.svg" alt="Email"> alfielexa@proton.me
-        </a>
-      </div>
-    </section>
-  </main>
+            const bubble = document.createElement('div');
+            bubble.classList.add('bubble', sender);
+            bubble.textContent = text;
+
+            messageContainer.appendChild(bubble);
+            document.getElementById('messages').appendChild(messageContainer);
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const message = input.value.trim();
+            if (message === '') return;
+            const formattedMessage = `Alfie (User): "${message}"`;
+            appendMessage('user', formattedMessage);
+            input.value = '';
+
+            const response = cekStatus(message);
+            setTimeout(() => {
+                appendMessage('bot', response);
+                document.getElementById('messages').scrollTop = document.getElementById('messages').scrollHeight;
+            }, 500);
+        }
+
+        function toggleDropup() {
+            document.getElementById('dropup-content').classList.toggle('show');
+        }
+
+        function insertAndSendAction(action) {
+            document.getElementById('userInput').value = action;
+            sendMessage();
+            toggleDropup();
+        }
+
+        document.getElementById('userInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropup button')) {
+                const dropups = document.getElementsByClassName('dropup-content');
+                for (let i = 0; i < dropups.length; i++) {
+                    const openDropup = dropups[i];
+                    if (openDropup.classList.contains('show')) {
+                        openDropup.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>
