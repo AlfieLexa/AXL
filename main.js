@@ -183,11 +183,11 @@ function cekStatus(item) {
     
     //creator 
     const father = [
-        'Airy  (~Bot): "Ayahku adalah seorang CEO dari MachaaID bernama Alfie Luxiona Lexandra"'
+        'Airy  (~Bot): "Ayahku adalah seorang pelajar sekolah mengengah kejuruan dan ia adalah seorang drummer dan vokasil ketiga di BandBlazt bernama Alfie"'
     ]
     
     const mother = [
-    	'Airy  (~Bot): "Ibuku adalah seorang Dokter dan seorang Manager Keuangan dari MachaaID bernama Christy Valentina Aurora"'
+    	'Airy  (~Bot): "Ibuku adalah seorang pelajar sekolah menengah atas dan dokter sekaligus vokalis kedua di BlaztBand bernama Christy"'
     ]
     
     const macha = [
