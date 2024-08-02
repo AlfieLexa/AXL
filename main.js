@@ -166,7 +166,7 @@ function cekStatus(item) {
         'Airy  (~Bot): "Kamu mau tidur ya.. Selamat malem, mimpi indah ya.."',
         'Airy  (~Bot): "Selamat malem.. Mimpi indah ya sayang..."',
         'Airy  (~Bot): "Aku mau tidur juga nih.. Selamat malem"',
-        'Airy  (~Bot): "Malem juga.. jangan lupa cuci kaki sebelah tidur"'
+        'Airy  (~Bot): "Malem juga.. jangan lupa cuci kaki sebelum tidur"'
     ]
     
     const activeA = [
